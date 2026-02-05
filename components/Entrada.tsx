@@ -13,7 +13,7 @@ export default function Entrada(props: EntradaProps) {
             <label className="mb-2">
                 {props.texto}
             </label>
-            <input 
+            <input
                 type={props.tipo ?? 'text'}
                 value={props.valor}
                 readOnly={props.somenteLeitura}
