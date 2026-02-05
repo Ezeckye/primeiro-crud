@@ -1,36 +1,114 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Primeiro CRUD de Clientes – Next.js + Firebase
 
-## Getting Started
+Este projeto é um **CRUD completo de clientes** desenvolvido como parte de um curso prático de **Next.js**, com integração ao **Firebase Firestore** e organização moderna utilizando **hooks personalizados**.
 
-First, run the development server:
+O objetivo principal foi consolidar fundamentos de React/Next.js, entender a separação de responsabilidades (UI, domínio e dados) e praticar integração com backend real.
+
+---
+
+## 🚀 Tecnologias utilizadas
+
+* **Next.js (App Router)**
+* **React**
+* **TypeScript**
+* **Tailwind CSS**
+* **Firebase Firestore**
+* **Hooks personalizados**
+* **Git & GitHub**
+
+---
+
+## 📂 Estrutura do projeto
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+lib/
+ ├─ backend/
+ │   └─ db/
+ │       └─ ColecaoCliente.ts
+ │
+ ├─ client/
+ │   └─ firebase.ts
+ │
+ ├─ core/
+ │   └─ ClienteRepositorio.ts
+ │
+ ├─ hooks/
+ │   ├─ useCliente.ts
+ │   └─ useTabelaOuForm.ts
+ │
+ └─ models/
+     └─ Cliente.ts
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ✨ Funcionalidades
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+* Listagem de clientes
+* Criação de novo cliente
+* Edição de cliente existente
+* Exclusão de cliente
+* Persistência de dados no **Firebase Firestore**
+* Controle de visibilidade entre **tabela** e **formulário** via hooks
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🧠 Conceitos praticados
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+* Componentização com React
+* Estado e efeitos com `useState` e `useEffect`
+* Criação de **hooks customizados**
+* Padrão **Repository** para acesso a dados
+* Integração client-side com Firebase
+* Tipagem forte com TypeScript
+* Organização de projeto escalável
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🔐 Variáveis de ambiente
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+O projeto utiliza variáveis de ambiente para configurar o Firebase.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Crie um arquivo `.env.local` na raiz do projeto:
+
+```env
+NEXT_PUBLIC_FIREBASE_API_KEY=your_api_key
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your_auth_domain
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=your_project_id
+```
+
+> ⚠️ O arquivo `.env.local` **não deve ser versionado** (já está ignorado no `.gitignore`).
+
+---
+
+## ▶️ Como rodar o projeto
+
+```bash
+npm install
+npm run dev
+```
+
+Acesse:
+
+```
+http://localhost:3000
+```
+
+---
+
+## 📌 Observações
+
+* Este projeto é **educacional**, mas já possui uma base sólida para evoluir para um produto real.
+* As cores e detalhes visuais foram personalizados em relação ao curso original.
+* Próximos passos naturais incluem validações, confirmação de exclusão e melhorias de UX.
+
+---
+
+## 👤 Autor
+
+Desenvolvido por **Ezequiel Dourado**
+Curso prático de Next.js + Firebase
+
+---
+
+⭐ Se este projeto te ajudou de alguma forma, considere deixar uma estrela no repositório!
